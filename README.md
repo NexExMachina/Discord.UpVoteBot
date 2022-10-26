@@ -13,3 +13,15 @@ General idea is for a monthly media competition on a discord and allow the commu
  - **reactionType** - **1** or **2**.
  >Setting to 1 will do a Heart Emoji, and 2 will do an Up/Down Arrow.
  - **validURLs** - Array of URLs you wish to monitor for.
+
+
+## Installation
+### Windows
+
+ - [ ] Ensure [Node.js](https://nodejs.org/en/) is installed on your
+       machine.
+ - [ ] Put the folder where ever you want to store it.
+ - [ ] In the root of the folder type `cmd` in the address bar on windows
+ - [ ] In the open command prompt run `npm i` to install the node modules
+ - [ ] Fill out your config
+ - [ ] In the open command prompt run `node index.js`to run the bot
