@@ -17,7 +17,7 @@ General idea is for a monthly media competition on a discord and allow the commu
  - **validURLs**
  `["url1", "url2", "url3"] | Set which website URLs you wish to monitor (monitorURLs MUST be true)`
  - **monitorAttachments**
-`true / false | Will watch a channel for attachements true`
+`true / false | Will watch a channel for attachements if true`
 - **deleteNonContent**
 `true / false | Delete anything not deemed content by the above content (URL in list or has Attachment)`
 
