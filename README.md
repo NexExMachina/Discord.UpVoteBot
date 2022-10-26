@@ -21,7 +21,7 @@ General idea is for a monthly media competition on a discord and allow the commu
  - [ ] Ensure [Node.js](https://nodejs.org/en/) is installed on your
        machine.
  - [ ] Put the folder where ever you want to store it.
- - [ ] In the root of the folder type `cmd` in the address bar on windows
- - [ ] In the open command prompt run `npm i` to install the node modules
- - [ ] Fill out your config
- - [ ] In the open command prompt run `node index.js`to run the bot
+ - [ ] In the root of the folder type `cmd` in the address bar on Windows.
+ - [ ] In the open command prompt run `npm i` to install the node modules.
+ - [ ] Fill out your config.
+ - [ ] In the open command prompt run `node index.js`to run the bot.
