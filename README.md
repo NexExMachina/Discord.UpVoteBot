@@ -1,4 +1,3 @@
-
 # Discord.UpVoteBot
 
 A Simple Discord Bot to monitor a  specified channel for video URLs/attachments and add reactions to them
@@ -13,6 +12,8 @@ General idea is for a monthly media competition on a discord and allow the commu
  - **reactionType** - **1** or **2**.
  >Setting to 1 will do a Heart Emoji, and 2 will do an Up/Down Arrow.
  - **validURLs** - Array of URLs you wish to monitor for.
+ - **monitorAttachments** - **true** or **false**.
+ >Will watch a channel for attachments if true
 
 
 ## Installation

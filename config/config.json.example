@@ -1,6 +1,9 @@
 {
   "token": "YOUR TOKEN",
-  "upVoteChannel": "1028056303752458300",
+  "upVoteChannel": "1034781939707695106",
   "reactionType": 1,
-  "validURLs": ["youtu.be","youtube.com", "streamable.com", "medal.tv"]
+  "monitorURLs": true,
+  "validURLs": ["youtu.be","youtube.com", "streamable.com", "medal.tv"],
+  "monitorAttachments": true,
+  "deleteNonContent": true
 }

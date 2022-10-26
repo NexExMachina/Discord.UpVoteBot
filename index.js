@@ -13,7 +13,7 @@ global.config = require('./config/config.json');//Import Config
     // login using the provided discord token and report ready
     client.login(config.token)
         .then(r => client.on("ready", () =>{
-            console.log("I am ready!")
+            console.log("I am ready!");
         }));
 //-------------
 //End Connect
@@ -23,21 +23,26 @@ global.config = require('./config/config.json');//Import Config
 //Begin Message Monitoring
 //-------------
 client.on("messageCreate", (message) => {
-
+    //Run if channelID matches config
     if(message.channelId === config.upVoteChannel){
-        //Search Array for message url React if true
-        for (let i = 0; i < config.validURLs.length; i++) {
-            if(message.content.includes(config.validURLs[i])){
-                addReactions(message)
+        //Delete if not Content
+        checkContent(message);
+        //Search Array for message url React if true in config
+        if(config.monitorURLs){
+            for (let i = 0; i < config.validURLs.length; i++) {
+                //Found in array React
+                if(message.content.includes(config.validURLs[i])){
+                    addReactions(message)
+                }
             }
         }
         //Video file true React
-        if (message.attachments.size > 0){
-            addReactions(message)
+        if (config.monitorAttachments && message.attachments.size > 0){
+            addReactions(message);
         }
         //Ignore Bots
         if (message.author.bot){
-            return
+            return;
         }
     }
 });
@@ -52,16 +57,37 @@ client.on("messageCreate", (message) => {
 function addReactions(message){
     switch (config.reactionType) {
         case 1:
-            message.react("❤")
-            break
+            message.react("❤");
+            break;
         case 2:
-            message.react("⬆")
-            message.react("⬇")
-            break
+            message.react("⬆");
+            message.react("⬇");
+            break;
         default:
-            return
+            return;
     }
 }
 //-------------
 //End Reactions
+//-------------
+
+//-------------
+//Start Content Cleanup
+//-------------
+function checkContent(message) {
+    for (let i = 0; i < config.validURLs.length; i++) {
+        if(message.content.includes(config.validURLs[i])){
+            return;
+        }
+    }
+    if(message.attachments.size > 0){
+        return;
+    }
+    message.delete();
+    console.log("Deleted Non-Content")
+    return;
+}
+
+//-------------
+//End Content Cleanup
 //-------------
