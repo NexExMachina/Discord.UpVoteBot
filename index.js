@@ -30,9 +30,11 @@ client.on("messageCreate", (message) => {
         if(validateMessage(message)){
             addReactions(message)
             console.log("Valid Content - Reacted")
-        } else{
+        } else if (config.deleteNonContent){
             message.delete();
             console.log("Deleted Non-Content");
+        } else{
+            return
         }
 }
 }
