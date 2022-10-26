@@ -84,10 +84,9 @@ function checkContent(message) {
         return;
     }
     message.delete();
-    console.log("Deleted Non-Content")
+    console.log("Deleted Non-Content");
     return;
 }
-
 //-------------
 //End Content Cleanup
 //-------------
