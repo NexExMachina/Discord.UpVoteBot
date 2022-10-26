@@ -1,6 +1,6 @@
 {
   "token": "YOUR TOKEN",
-  "upVoteChannel": 1028056303752458300,
+  "upVoteChannel": "1028056303752458300",
   "reactionType": 1,
   "validURLs": ["youtu.be","youtube.com", "streamable.com", "medal.tv"]
 }
